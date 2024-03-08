@@ -1,8 +1,18 @@
 import Layout from "@/components/layout"
+import RedSocial from "@/components/redSocial"
 import Image from "next/image"
 import styles from "../styles/contacto.module.css"
 
 export default function Contacto() {
+
+  const iconosRedes = [
+    'facebook',
+    'instagram',
+    'youtube',
+    'X',
+    'linkedin'
+  ]
+
   return (
 
     <Layout
@@ -23,26 +33,9 @@ export default function Contacto() {
         <h2 className="heading">Seguinos en las redes sociales</h2>
 
       <div className={styles.barra}>
+
+        { iconosRedes.map( red => <RedSocial redSocial={red} />)}
         
-        <div className={styles.tarjeta}>
-            <Image src="/img/facebook.svg" width={50} height={50} alt='icono facebook' />
-        </div>
-
-        <div className={styles.tarjeta}>
-            <Image src="/img/instagram.svg" width={50} height={50} alt='icono instagram' />
-        </div>
-
-        <div className={styles.tarjeta}>
-            <Image src="/img/youtube.svg" width={50} height={50} alt='icono youtube' />
-        </div>
-
-        <div className={styles.tarjeta}>
-            <Image src="/img/X.svg" width={50} height={50} alt='icono X' />
-        </div>
-
-        <div className={styles.tarjeta}>
-            <Image src="/img/linkedin.svg" width={50} height={50} alt='icono linkedin' />
-        </div>
 
       </div>
     </div>
