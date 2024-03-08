@@ -21,6 +21,10 @@ export default function Footer() {
               Nosotros
           </Link>
 
+          <Link href="/contacto">
+              Contacto
+          </Link>
+
         </nav>
 
       </div>

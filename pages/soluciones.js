@@ -1,6 +1,10 @@
 import Layout from "@/components/layout"
+import styles from "../styles/grid.module.css"
+import Solucion from "../components/solucion"
+import {SOLUCIONES} from "../constants/index.js"
 
 export default function Soluciones() {
+
   return (
 
     <Layout
@@ -8,7 +12,19 @@ export default function Soluciones() {
         description={'Todos nuestros servicios'}
     >
 
-    <h1>Soluciones</h1>
+    <main className="contenedor">
+      <h2 className="heading">Nuestras soluciones</h2>
+      <div className={styles.grid}>
+        {SOLUCIONES?.map(solucion => (
+          <>
+          <Solucion
+          key={solucion.id}
+          solucion={solucion}
+          />
+          </>
+        ))}
+      </div>
+    </main>
 
     </Layout>
   )
